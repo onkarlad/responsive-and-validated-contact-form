@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ROUND 1 TASK</title>
+
+    <!-- linked bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+    <!-- linked font-awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- linked own css -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+</head>
+
+<body>
+    <!-- ================
+    Navbar-section
+        ================ -->
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="./Images/logo.png" alt="logo" class="img-fluid" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-stream navbar-toggler-icon"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" aria-current="page" href="#">About</a>
+                    <a class="nav-link" href="#">Services</a>
+                    <a class="nav-link" href="#">Blogs</a>
+                    <a class="nav-link active" href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================
+    breadcrumb-section
+        ================ -->
+    <div class="container-fluid bg-primary" id="contact">
+        <div class="row">
+            <div class="col-12 col-sm-6">
+                <h4 class="contact_title">Contact us</h4>
+            </div>
+            <div class="col-12 col-sm-6">
+                <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            Contact
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================
+        Address-section
+        ================ -->
+    <div class="container address">
+        <div class="row">
+            <div class=" col-12 col-md-6 first_section pb-4">
+                <div class="col-12 mt-4">
+                    <h1>Get in touch with us</h1>
+                    <p class="text-secondary">
+                        Contact us for a Website,Mobile application,Digital marketing
+                        <br />
+                        or IT support
+                    </p>
+                </div>
+
+                <div class="row location mt-3">
+                    <div class="col-12 d-flex">
+                        <img src="./Images/address.png" alt="address image" class="location_logo" />
+                        <p class="ms-4 text-secondary">
+                            Innovfide Technologies <br />Anulekha,Anurag Nagar, Tulinj,
+                            <br />Nallasopara East
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row email mt-3">
+                    <div class="col-12 d-flex">
+                        <img src="./Images/email.png" alt="email image" class="location_logo" />
+                        <p class="ms-4 mt-2 text-secondary">business@innovfide.com</p>
+                    </div>
+                </div>
+
+                <div class="row phone mt-5">
+                    <div class="col-12 d-flex">
+                        <img src="./Images/phone.png" alt="phone image" class="location_logo" />
+                        <p class="ms-4 mt-2 text-secondary">+91 8767484648</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- contact form -->
+            <div class=" col-12 col-md-6 contact_form mt-4 second_section ps-md-5 ps-xl-0">
+                <form class=" row offset-xl-1" name="myForm" onsubmit="return myFunc()" autocomplete="on">
+                    <div class="col-xl-6 col-12 ">
+                        <label for="first_name" class=" form-label">First Name: <span
+                                class=" text-danger">*</span></label>
+                        <input type="text" class=" form-control" id="first_name"
+                            placeholder="Please enter your first name">
+                        <small id="nameMessage"></small>
+                    </div>
+                    <div class="col-xl-6 col-12 mt-4 mt-xl-0">
+                        <label for="last_name" class=" form-label">Last Name: <span
+                                class=" text-danger">*</span></label>
+                        <input type="text" class=" form-control" id="last_name"
+                            placeholder="Please enter your last name">
+                        <small id="lastnamemsg"></small>
+                    </div>
+
+                    <div class="col-xl-6 col-12 mt-4">
+                        <label for="email" class=" form-label">Email: <span class=" text-danger">*</span></label>
+                        <input type="email" class=" form-control" id="email" placeholder="Please enter your email">
+                        <small id="emailmsg"></small>
+                    </div>
+                    <div class="col-xl-6 col-12 mt-4">
+                        <label for="phone" class=" form-label">Phone: <span class=" text-danger">*</span></label>
+                        <input type="number" class=" form-control" id="phone" placeholder="Please enter phone number">
+                        <small id="phonemsg"></small>
+                    </div>
+
+                    <div class="col-12 mt-4 fw-bold">
+                        <p>Do you have a website? <span class=" text-danger">*</span></p>
+                        <small id="radiomsg"></small>
+                        <div class="form-check form-check-inline ">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="yes" onclick="text(0)">
+                            <label class="form-check-label" for="inlineRadio1">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="no" onclick="text(1)">
+                            <label class="form-check-label" for="inlineRadio2">No</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mt-4 fw-bold" id="website_input">
+                        <label for="website" class=" form-label">Website URL:</label>
+                        <input type="text" class=" form-control " id="website"
+                            placeholder="please enter your website url">
+                        <small id="urlmsg"></small>
+                    </div>
+
+                    <div class="col-12 mt-4 mb-2">
+                        <input type="submit" value="Submit" class="btn btn-warning w-50">
+                    </div>
+
+                </form>
+
+            </div>
+            <hr>
+        </div>
+
+
+
+        <!-- ================
+        footer-section
+        ================ -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class=" text-secondary">All Rights Reserved | <span class=" text-primary">Innovfide
+                            Technologies</span> | 2021</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- linked bootstrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+        <!-- linked js -->
+        <script src="./js/main.js"></script>
+</body>
+
+</html>

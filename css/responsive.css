@@ -1,0 +1,26 @@
+@media (max-width: 991px) {
+  .navbar .navbar-nav a {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .address .first_section {
+    border-right: none;
+    margin-left: 3rem;
+    border-bottom: 1px solid gray;
+  }
+}
+
+@media (max-width: 575px) {
+  .breadcrumb {
+    justify-content: flex-start;
+    margin-left: 3rem;
+  }
+
+  .address .first_section {
+    margin-left: 0%;
+  }
+}
